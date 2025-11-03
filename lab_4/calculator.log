@@ -1,0 +1,35 @@
+2025-11-03 12:52:55,795 - Calculator - INFO - ==================================================
+2025-11-03 12:52:55,795 - Calculator - INFO - Calculator application started
+2025-11-03 12:52:55,795 - Calculator - INFO - ==================================================
+2025-11-03 12:53:13,720 - Calculator - DEBUG - User selected option: 5
+2025-11-03 12:53:18,267 - Calculator - DEBUG - User entered valid number: 2.0
+2025-11-03 12:53:19,587 - Calculator - DEBUG - User entered valid number: 5.0
+2025-11-03 12:53:19,587 - Calculator - DEBUG - power() called with arguments: a=2.0, b=5.0
+2025-11-03 12:53:19,587 - Calculator - INFO - Power: 2.0 ^ 5.0 = 32.0
+2025-11-03 12:53:23,671 - Calculator - DEBUG - User selected option: 7
+2025-11-03 12:53:23,671 - Calculator - INFO - User requested to exit
+2025-11-03 12:53:23,671 - Calculator - INFO - Calculator application stopped
+2025-11-03 12:53:23,671 - Calculator - INFO - ==================================================
+2025-11-03 12:54:22,388 - Calculator - INFO - ==================================================
+2025-11-03 12:54:22,388 - Calculator - INFO - Calculator application started
+2025-11-03 12:54:22,388 - Calculator - INFO - ==================================================
+2025-11-03 12:54:25,329 - Calculator - DEBUG - User selected option: 4
+2025-11-03 12:54:27,543 - Calculator - DEBUG - User entered valid number: 10.0
+2025-11-03 12:54:28,756 - Calculator - DEBUG - User entered valid number: 0.0
+2025-11-03 12:54:28,756 - Calculator - DEBUG - divide() called with arguments: a=10.0, b=0.0
+2025-11-03 12:54:28,757 - Calculator - WARNING - Division by zero attempted: 10.0 / 0.0
+2025-11-03 12:54:28,757 - Calculator - ERROR - An error occurred during division
+Traceback (most recent call last):
+  File "/home/mohit/Downloads/github_lab/lab_4/calc.py", line 62, in divide
+    raise ZeroDivisionError("Cannot divide by zero!")
+ZeroDivisionError: Cannot divide by zero!
+2025-11-03 12:54:35,744 - Calculator - DEBUG - User selected option: 6
+2025-11-03 12:54:39,898 - Calculator - DEBUG - User entered valid number: 16.0
+2025-11-03 12:54:39,898 - Calculator - DEBUG - square_root() called with argument: a=16.0
+2025-11-03 12:54:39,898 - Calculator - INFO - Square root: √16.0 = 4.0
+2025-11-03 12:54:41,496 - Calculator - DEBUG - User selected option: 0
+2025-11-03 12:54:41,496 - Calculator - WARNING - Invalid menu choice: 0
+2025-11-03 12:54:45,062 - Calculator - DEBUG - User selected option: 7
+2025-11-03 12:54:45,063 - Calculator - INFO - User requested to exit
+2025-11-03 12:54:45,063 - Calculator - INFO - Calculator application stopped
+2025-11-03 12:54:45,063 - Calculator - INFO - ==================================================
