@@ -1,0 +1,54 @@
+ELK Lab (Fedora) – Quick Setup
+1. Install Elasticsearch & Kibana
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+sudo tee /etc/yum.repos.d/elasticsearch.repo <<EOF
+[elasticsearch]
+name=Elasticsearch
+baseurl=https://artifacts.elastic.co/packages/8.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+type=rpm-md
+EOF
+
+sudo dnf install elasticsearch kibana -y
+sudo systemctl enable --now elasticsearch
+sudo systemctl enable --now kibana
+
+2. (Optional) Disable security for easy local use
+
+Elasticsearch (/etc/elasticsearch/elasticsearch.yml):
+
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+
+
+Kibana (/etc/kibana/kibana.yml):
+
+xpack.security.enabled: false
+
+
+Restart:
+
+sudo systemctl restart elasticsearch
+sudo systemctl restart kibana
+
+
+Open Kibana:
+
+http://localhost:5601
+
+3. Generate sample logs
+
+Run:
+
+python3 generate_pipeline_logs.py
+
+
+This creates pitchquest_pipeline.log.
+
+4. Load logs into Kibana
+
+In Kibana:
+Management → Upload File → Select pitchquest_pipeline.log
